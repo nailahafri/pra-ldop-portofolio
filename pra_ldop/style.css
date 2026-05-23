@@ -1,0 +1,310 @@
+/* ===========================
+   RESET & BASE
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #fffbfc;
+    color: #1a1a2e;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 64px;
+    background-color: #f0527e;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navkiri {
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.navkanan {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.navkanan li a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.navkanan li a:hover {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* ===========================
+   HOME / HERO
+=========================== */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 64px);
+    background-color: #fff0f4;
+    padding: 60px 80px;
+    gap: 40px;
+}
+
+.homekiri {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #fce4ec;
+    color: #c2185b;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    padding: 6px 16px;
+    border-radius: 50px;
+    border: 1px solid #f48fb1;
+    width: fit-content;
+}
+
+.homekiri h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.homekiri h1 span {
+    color: #f0527e;
+}
+
+.homekiri p {
+    font-size: 16px;
+    color: #7a7a9a;
+    line-height: 1.75;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #f0527e;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 50px;
+    width: fit-content;
+    margin-top: 8px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #d63b65;
+    transform: translateY(-2px);
+}
+
+.homekanan img {
+    width: 280px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    border: 4px solid #f8bbd0;
+    box-shadow: 0 16px 48px rgba(240, 82, 126, 0.2);
+}
+
+/* ===========================
+   TICKER
+=========================== */
+.ticker {
+    background-color: #f0527e;
+    overflow: hidden;
+    padding: 12px 0;
+}
+
+.ticker-track {
+    display: flex;
+    gap: 0;
+    animation: ticker 20s linear infinite;
+    width: max-content;
+}
+
+.ticker-track span {
+    padding: 0 24px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    white-space: nowrap;
+}
+
+@keyframes ticker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* ===========================
+   SECTION HEADER (shared)
+=========================== */
+.section-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f0527e;
+    margin-bottom: 8px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+}
+
+.section-desc {
+    font-size: 15px;
+    color: #7a7a9a;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ===========================
+   SERVICES
+=========================== */
+.services {
+    padding: 80px 80px;
+    background-color: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background-color: #fffbfc;
+    border: 1.5px solid #f0d6de;
+    border-radius: 16px;
+    padding: 32px 24px;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(240, 82, 126, 0.12);
+    border-color: #f0527e;
+}
+
+.card-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #7a7a9a;
+    line-height: 1.65;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #f0527e;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+footer strong {
+    color: white;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 900px) {
+    nav {
+        padding: 0 24px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 48px 24px;
+        min-height: auto;
+    }
+
+    .homekiri {
+        align-items: center;
+    }
+
+    .homekiri h1 {
+        font-size: 40px;
+    }
+
+    .homekanan img {
+        width: 220px;
+        height: 270px;
+    }
+
+    .services,
+    .portofolio {
+        padding: 60px 24px;
+    }
+
+    .services-grid,
+    .portofolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .navkanan {
+        gap: 16px;
+    }
+
+    .services-grid,
+    .portofolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
